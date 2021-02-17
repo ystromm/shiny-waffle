@@ -1,0 +1,22 @@
+{
+  "name": "shiny-waffle",
+  "version": "1.0.0",
+  "description": "Plugin exercise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ystromm/shiny-waffle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ystromm/shiny-waffle/issues"
+  },
+  "homepage": "https://github.com/ystromm/shiny-waffle#readme",
+  "dependencies": {
+    "typescript": "^4.1.5"
+  }
+}
