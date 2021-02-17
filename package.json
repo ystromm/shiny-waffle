@@ -2,9 +2,9 @@
   "name": "shiny-waffle",
   "version": "1.0.0",
   "description": "Plugin exercise.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,14 @@
     "url": "https://github.com/ystromm/shiny-waffle/issues"
   },
   "homepage": "https://github.com/ystromm/shiny-waffle#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.16",
+    "@types/jest": "^26.0.20",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
   }
 }
