@@ -4,7 +4,9 @@ Plugin exercise.
 
 https://api.meteostat.net/v2
 
-GET /stations/meta?id=02590
+curl -H "x-api-key: $API_KEY" 'https://api.meteostat.net/v2/stations/search?query=Stock&limit=10'
+
+curl -H "x-api-key: $API_KEY" https://api.meteostat.net/v2/stations/meta?id=02590
 
 ```json
 {
