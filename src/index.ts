@@ -1,4 +1,4 @@
-import { Auth, Interval, Runner, Source } from "./runner";
+import {Auth, Interval, Runner, Source} from "./runner";
 
 var readline = require('readline');
 
@@ -21,24 +21,26 @@ interface InputData {
 }
 
 
-rl.on('line', function (stdInString: string) {
-    const inputData = JSON.parse(stdInString) as InputData;
-    const plugin = new Runner()
+rl.on('line', function (line: string) {
+    console.log(line);
+    const inputData = JSON.parse(line) as InputData;
+    const plugin = new Runner();
 
-    var result = undefined;
+    var result = {};
 
     switch (inputData.command) {
         case "download": {
             if (typeof inputData.params !== "undefined") {
                 result = plugin.download(inputData.params.source, inputData.params.auth, inputData.params.interval);
-            }
-            else {
+            } else {
                 // boom
+                result = {error: {type: "READ_ERROR", "message": "Missing params"}};
             }
             break;
         }
         default: {
-            // boom
+            result = {error: {type: "READ_ERROR", "message": "Unknown command"}};
+            break;
         }
     }
 
