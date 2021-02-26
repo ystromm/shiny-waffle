@@ -1,4 +1,4 @@
-import {Client} from './client'
+import { Client } from './client'
 
 export interface Interval {
     start: string,
@@ -19,7 +19,6 @@ export interface Output {
         rows: (string | number)[][]
     }
 }
-
 export class Runner {
     public download = async (source: Source, auth: Auth, interval: Interval): Promise<Output> => {
         const client = new Client(auth.api_key);
@@ -27,6 +26,7 @@ export class Runner {
         const rows = stationDaily.data.map((dailyObservation) => {
             return [dailyObservation.date, dailyObservation.tavg]
         })
-        return {data: {headers: ["date", "tavg"], rows: rows}}
+        console.log(rows);
+        return { data: { headers: ["date", "tavg"], rows: rows } }
     }
 }

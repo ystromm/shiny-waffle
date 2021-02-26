@@ -5,7 +5,22 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "download": echo {
+      "params": {
+        "source": {
+          "definition": {
+            "stationId": '01358'
+          },
+          "auth": {
+            "api_key": ''
+          },
+          "interval": {
+            "start": '2020.01.01',
+            "end": '2020.01.02'
+          }
+        }
+      } | ts-node src/index.ts'
   },
   "repository": {
     "type": "git",

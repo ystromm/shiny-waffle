@@ -34,6 +34,7 @@ export class Client {
         //     );
     }
 
+
     public getStationMeta = (id: string) => this.axiosInstance.get<StationMeta>('/stations/meta',
         {
             headers: {'x-api-key': this.apiKey},
@@ -42,7 +43,7 @@ export class Client {
 
     public getStationDaily = (station: string, start: string, end: string) => this.axiosInstance.get<StationDaily>('/stations/daily',
         {
-            headers: {'x-api-key': this.apiKey},
-            params: {station, start, end}
+            headers: { 'x-api-key': this.apiKey },
+            params: { station, start, end }
         }).then(result => result.data);
 }
